@@ -1,0 +1,72 @@
+# .gitignore per progetto Unity
+# Da posizionare nella cartella radice del progetto (dove ci sono Assets, Packages, ProjectSettings)
+ 
+# === Cartelle generate da Unity (si rigenerano da sole, NON vanno tracciate) ===
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+ 
+# MemoryCaptures possono essere enormi e contenere dati sensibili
+[Mm]emoryCaptures/
+ 
+# Recordings possono diventare molto pesanti
+[Rr]ecordings/
+ 
+# === IDE e cache ===
+.vs/
+.idea/
+.gradle/
+.consulo/
+ExportedObj/
+ 
+# === File di progetto autogenerati (si rigenerano all'apertura) ===
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+ 
+# === Meta file generati ===
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+ 
+# === Crash report ===
+sysinfo.txt
+ 
+# === Build output ===
+*.apk
+*.aab
+*.unitypackage
+*.app
+ 
+# === Crashlytics ===
+crashlytics-build.properties
+ 
+# === Addressables ===
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+ 
+# === Streaming Assets temporanei (Android) ===
+[Aa]ssets/[Ss]treamingAssets/aa.meta
+[Aa]ssets/[Ss]treamingAssets/aa/*
+ 
+# === Roba locale ===
+.vscode/
+.vsconfig
+Local/
+Local.meta
+_local/
+_local.meta
