@@ -1,29 +1,55 @@
+using System.Collections;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [Header("Sparo")]
-    public Transform shootingPoint;         
+    [Header("Shoot")]
+    public Transform muzzle;
     public float maxDistance = 100f;
-    public LayerMask hitLayers = ~0;
-    
+    public LayerMask hitLayers = 0;
+ 
+    [Header("LineRenderer")]
+    public float lineDuration = 0.05f;
+ 
+    private LineRenderer _line;
+ 
+    private void Awake()
+    {
+        _line = GetComponent<LineRenderer>();
+        _line.enabled = false;          
+        _line.positionCount = 2;
+        _line.useWorldSpace = true;
+    }
     
     public void Fire()
     {
-        Transform origin = shootingPoint != null ? shootingPoint : transform;
-
-        Debug.DrawRay(origin.position, origin.forward * maxDistance, Color.red, 0.5f);
-
+        Transform origin = muzzle != null ? muzzle : transform;
+ 
+        Vector3 start = origin.position;
+        Vector3 end;
+ 
         if (Physics.Raycast(origin.position, origin.forward,
-                out RaycastHit hit, maxDistance, hitLayers))
+                            out RaycastHit hit, maxDistance, hitLayers))
         {
-            Debug.Log($"[Gun] Colpito: {hit.collider.name}");
+            end = hit.point;
             var forceField = hit.collider.GetComponentInParent<ForceField>();
             if (forceField != null) forceField.Hit();
         }
         else
         {
-            Debug.Log("[Gun] Sparo a vuoto.");
+            end = origin.position + origin.forward * maxDistance;
         }
+        
+        StopAllCoroutines();
+        StartCoroutine(ShowLine(start, end));
+    }
+ 
+    private IEnumerator ShowLine(Vector3 start, Vector3 end)
+    {
+        _line.SetPosition(0, start);
+        _line.SetPosition(1, end);
+        _line.enabled = true;
+        yield return new WaitForSeconds(lineDuration);
+        _line.enabled = false;
     }
 }

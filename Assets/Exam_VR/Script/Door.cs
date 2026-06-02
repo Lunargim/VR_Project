@@ -11,7 +11,6 @@ public class Door : MonoBehaviour
     public void Open()
     {
         if (_isOpen || _isOpening) return;
-        Debug.Log("[Door] Apertura porta.");
         StartCoroutine(OpenRoutine());
     }
 
@@ -39,6 +38,5 @@ public class Door : MonoBehaviour
 
         _isOpening = false;
         _isOpen = true;
-        Debug.Log("[Door] Porta aperta.");
     }
 }
