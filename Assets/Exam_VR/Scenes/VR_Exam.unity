@@ -1981,6 +1981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftController
       objectReference: {fileID: 0}
+    - target: {fileID: 6388049071951604674, guid: e39bf8982cdd603499ec46cdc693762a, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7613617425873059416, guid: e39bf8982cdd603499ec46cdc693762a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4905,6 +4909,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 6750760428940263354, guid: ba093a74d9302b14d930024e7f0d01a9, type: 3}
+      propertyPath: m_Move
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6907197185684083254, guid: ba093a74d9302b14d930024e7f0d01a9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4923,11 +4931,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6969564079725068316, guid: ba093a74d9302b14d930024e7f0d01a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.95
+      value: 43.67
       objectReference: {fileID: 0}
     - target: {fileID: 6969564079725068316, guid: ba093a74d9302b14d930024e7f0d01a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.94
+      value: 0.512
       objectReference: {fileID: 0}
     - target: {fileID: 6969564079725068316, guid: ba093a74d9302b14d930024e7f0d01a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7197,7 +7205,7 @@ PrefabInstance:
     - target: {fileID: 6274412956343122164, guid: 743f611e5f4bc8b449ba7ae2798c8301, type: 3}
       propertyPath: m_RightHandTurnInput.m_InputActionReference
       value: 
-      objectReference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6340285409757215428, guid: 743f611e5f4bc8b449ba7ae2798c8301, type: 3}
       propertyPath: m_Enabled
       value: 0
