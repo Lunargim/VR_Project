@@ -5,19 +5,19 @@ public class Door : MonoBehaviour
     public float duration = 1.5f;
     
     public Vector3 slideOffset = new Vector3(0f, 3f, 0f);
-    private bool isOpening = false;
-    private bool isOpen = false;
+    private bool _isOpening = false;
+    private bool _isOpen = false;
     
     public void Open()
     {
-        if (isOpen || isOpening) return;
+        if (_isOpen || _isOpening) return;
         Debug.Log("[Door] Apertura porta.");
         StartCoroutine(OpenRoutine());
     }
 
     private IEnumerator OpenRoutine()
     {
-        isOpening = true;
+        _isOpening = true;
 
         Vector3 startPos = transform.localPosition;
 
@@ -37,8 +37,8 @@ public class Door : MonoBehaviour
 
         transform.localPosition = endPos;
 
-        isOpening = false;
-        isOpen = true;
+        _isOpening = false;
+        _isOpen = true;
         Debug.Log("[Door] Porta aperta.");
     }
 }

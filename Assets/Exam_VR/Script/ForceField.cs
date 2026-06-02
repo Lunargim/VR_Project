@@ -6,12 +6,12 @@ public class ForceField : MonoBehaviour
     [Header("Eventi")]
     public UnityEvent onDestroyed;
 
-    private bool alreadyHit = false;
+    private bool _alreadyHit = false;
     
     public void Hit()
     {
-        if (alreadyHit) return; //evita doppie chiamate
-        alreadyHit = true;
+        if (_alreadyHit) return; //evita doppie chiamate
+        _alreadyHit = true;
 
         Debug.Log("[ForceField] Colpito! Il campo di forza si disattiva.");
         
