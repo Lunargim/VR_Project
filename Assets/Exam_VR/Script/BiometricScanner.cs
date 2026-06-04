@@ -16,7 +16,7 @@ public class BiometricScanner : MonoBehaviour
     [Header("Gesture")]
     public XRHandPose handPose;
 
-    [Header("Prossimita'")]
+    [Header("Proximity")]
     public float activationRadius = 0.25f;
     public Transform scannerPoint;
 
